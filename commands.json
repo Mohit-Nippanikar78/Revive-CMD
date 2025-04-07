@@ -2,14 +2,10 @@
   "commands": [
     {
       "terminal": "terminal 1",
-      "command": "echo 'Hello World!'"
+      "command": "echo 'Hello Mohit!'"
     },
     {
       "terminal": "terminal 2",
-      "command": "echo 'Hello World!'"
-    },
-    {
-      "terminal": "terminal 3",
       "command": "echo 'Hello World!'"
     }
   ]

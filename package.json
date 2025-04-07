@@ -1,8 +1,10 @@
 {
   "name": "revive-cmd",
   "displayName": "Revive CMD",
-  "description": "",
-  "version": "0.0.1",
+  "description": "Run your common commands with a single click",
+  "publisher": "mohitnippanikar",
+  "version": "2.0.1",
+  "icon": "assets/logo.png",
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -15,11 +17,38 @@
     "commands": [
       {
         "command": "revive-cmd.runCommands",
-        "title": "Run Commands",
-        "icon": {
-          "light": "./assets/run-light.svg",
-          "dark": "./assets/run-dark.svg"
-        }
+        "title": "Run Commands from JSON",
+        "icon": "$(terminal-debian)"
+      },
+      {
+        "command": "revive-cmd.showCommandsDropdown",
+        "title": "Select Command to Run...",
+        "icon": "$(terminal-debian)"
+      },
+      {
+        "command": "revive-cmd.npmRunDev",
+        "title": "Run: npm run dev",
+        "icon": "$(terminal-debian)"
+      },
+      {
+        "command": "revive-cmd.npmStart",
+        "title": "Run: npm start",
+        "icon": "$(terminal-debian)"
+      },
+      {
+        "command": "revive-cmd.npmBuild",
+        "title": "Run: npm run build",
+        "icon": "$(terminal-debian)"
+      },
+      {
+        "command": "revive-cmd.npmTest",
+        "title": "Run: npm test",
+        "icon": "$(terminal-debian)"
+      },
+      {
+        "command": "revive-cmd.gitPull",
+        "title": "Run: git pull",
+        "icon": "$(terminal-debian)"
       }
     ],
     "menus": {
@@ -27,6 +56,57 @@
         {
           "command": "revive-cmd.runCommands",
           "alt": "revive-cmd.runCommands",
+          "group": "navigation"
+        },
+        {
+          "command": "revive-cmd.showCommandsDropdown",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "revive-cmd.runCommands",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "revive-cmd.showCommandsDropdown",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "revive-cmd.npmRunDev",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "revive-cmd.npmStart",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "revive-cmd.npmBuild",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "revive-cmd.npmTest",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "revive-cmd.gitPull",
+          "when": "editorIsOpen"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "revive-cmd.showCommandsDropdown",
+          "when": "view == explorer",
+          "group": "navigation"
+        },
+        {
+          "command": "revive-cmd.npmRunDev",
+          "when": "view == explorer",
+          "group": "navigation"
+        },
+        {
+          "command": "revive-cmd.npmStart",
+          "when": "view == explorer",
           "group": "navigation"
         }
       ]
@@ -45,5 +125,19 @@
     "typescript": "^5.4.5",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/revive-cmd"
+  },
+  "keywords": [
+    "terminal",
+    "command",
+    "development",
+    "productivity",
+    "npm",
+    "scripts"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
